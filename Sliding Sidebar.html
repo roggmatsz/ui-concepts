@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.semi-opaque {
+			background-color: #000;
+			opacity: 0.5;
+		}
+		.sidebar {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			max-width: 240px;
+			height: 100%;
+			opacity: 1;
+			overflow: hidden;
+			pointer-events: none;
+			background-color: red;
+			will-change: transform;
+			transition: transform 0.2s cubic-bezier(0, 0, 0.3, 1);
+			transform: translateX(-102%);
+		}
+		.sidebar-visible {
+			transform: translateX(0);
+			pointer-events: all;
+		}
+
+	</style>
+</head>
+<body>
+	<aside class="sidebar">
+		<span>Stuff Hereeee</span>
+	</aside>
+	<button id="button1" type="button">Click</button>
+</body>
+<script type="text/javascript">
+	(function() {
+		var button = document.getElementById('button1');
+		var sidebar = document.querySelector('.sidebar');
+
+		button.addEventListener('click', function(event) {
+			sidebar.classList.add('sidebar-visible');
+			event.stopPropagation();
+		});
+		sidebar.addEventListener('click', function(event) {
+			event.stopPropagation();
+		});
+		window.addEventListener('click', function() {
+			sidebar.classList.remove('sidebar-visible');
+		});
+	})();
+</script>
+</html>
