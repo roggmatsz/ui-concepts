@@ -1,3 +1,4 @@
+html, body {margin: 0; padding: 0;}
 body * {
     border: 1px solid black;
 }
@@ -22,6 +23,13 @@ body * {
     display: flex;
     flex-direction: row-reverse;
 }
+.heading-flag {
+    margin-right: 20px;
+}
 #navbar {
     flex-grow: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
