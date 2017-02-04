@@ -1,6 +1,7 @@
 html, body {margin: 0; padding: 0;}
 body * {
     border: 1px solid black;
+    font-family: sans-serif;
 }
 .outerWrapper {
     display: flex;
@@ -32,4 +33,9 @@ body * {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+#navbar a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: none;
 }
