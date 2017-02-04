@@ -6,11 +6,20 @@ body * {
     flex-direction: row;
 }
 #logo {
-    width: 96px;
-    height: 96px;
+    width: 84px;
+    height: 84px;
     flex-basis: auto;
 }
 .innerWrapper {
     flex-grow: 1;
     flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    height: 84px;
+}
+#topRow {
+    flex-grow: 1;
+}
+#navbar {
+    flex-grow: 3;
 }
