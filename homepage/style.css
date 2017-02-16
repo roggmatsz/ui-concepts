@@ -1,4 +1,4 @@
-body * {border: 1px solid black;}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid black;
     width: 52%;
     height: 33%;
 }
@@ -25,6 +26,7 @@ body {
     }
         .section-logo {
             flex-basis: 30%;
+            border-right: 1px solid black;
         }
         .section-middle {
             display: flex;
@@ -41,6 +43,7 @@ body {
                 padding: 0 15px;
             }
             small {
+                color: #666;
                 margin-top: 15px;
                 margin-bottom: 5px;
                 font-size: 1.2rem;
@@ -50,6 +53,8 @@ body {
                 padding: 5px 15px 0 15px;
             }
             #title {
+                background-color: black;
+                color: white;
                 text-transform: uppercase;
                 padding: 7px 10px 5px 10px;
             }
@@ -59,14 +64,22 @@ body {
             flex-basis: 10%;
         }
             .social-links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 flex-grow: 1;
             }
+                .social-links img {
+                    width: 24px;
+                }
     .section-navigation {
         display: flex;
         align-items: stretch;
         flex-basis: 20%;
         flex-direction: row;
         justify-content: space-between;
+        border-top: 1px solid black;
     }
         .nav-block {
             display: flex;
@@ -74,13 +87,15 @@ body {
             flex-grow: 1;
             justify-content: center;
             align-items: stretch;
-        }
+            }
             .nav-block a {
                 display: flex;
                 padding: 0 20px;
                 flex-direction: column;
                 justify-content: center;
                 text-decoration: none;
+                border-bottom: 2px solid white;
             } .nav-block a:hover {
-                background-color: #ddd;
+                background-color: #eee;
+                border-bottom: 2px solid gray;
             }
