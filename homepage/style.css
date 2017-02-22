@@ -99,12 +99,33 @@ body {
                 align-items: center;
                 flex-grow: 1;
                 margin-left: 15px;
+                margin-bottom: 2px;
             } .social-links:hover {
                 background-color: red;
             }
                 .social-links img {
                     width: 20px;
                     margin: 0 10px;
+                }
+                .linkedin {
+                    border-right: 2px solid #1D87BD;
+                } .linkedin:hover {
+                    background-color: #DAE9F0;
+                }
+                .twitter {
+                    border-right: 2px solid #1DA1F2;
+                } .twitter:hover {
+                    background-color: #D4E6F2;
+                }
+                .github {
+                    border-right: 2px solid #333;
+                } .github:hover {
+                    background-color: #ddd;
+                }
+                .instagram {
+                    border-right: 2px solid #E02A5F;
+                } .instagram:hover {
+                    background-color: #FFD0DE;
                 }
     .section-navigation {
         display: flex;
