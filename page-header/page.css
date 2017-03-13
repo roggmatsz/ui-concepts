@@ -51,6 +51,22 @@ header {
         transform: translateY(0);
     }
 }
+@keyframes unreveal {
+    from {
+        opacity: 1;
+    }
+    to { 
+        opacity: 0;
+    }
+}
+@keyframes unslidedown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
 .mobile-wrapper {
     position: absolute;
     right: 0;
@@ -61,6 +77,10 @@ header {
     animation: reveal;
     animation-duration: 1s;
     opacity: 1;
+} .mobile-wrapper.hide {
+    animation: unreveal;
+    animation-duration: 1s;
+    opacity: 0;
 }
 .mobile-translucent-background {
     position: absolute;
@@ -76,7 +96,10 @@ header {
 } .mobile-menu-items.reveal {
     animation: slidedown;
     animation-duration: 1s;
-} 
+} .mobile-menu-items.hide {
+    animation: unslidedown;
+    animation-duration: 1s;
+}
 .mobile-menu-items > span {
     display: block;
     padding: 5px 10px;
