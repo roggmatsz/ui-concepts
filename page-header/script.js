@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
             mobileMenuPanel.classList.add('hide');
             mobileMenu.classList.add('hide');
             content.classList.remove('blur');
-
         } else {
             mobileMenuPanel.classList.remove('hidden');
             mobileMenuPanel.classList.add('reveal');
