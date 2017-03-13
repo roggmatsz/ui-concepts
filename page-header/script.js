@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             content.classList.remove('blur');
 
         } else {
+            mobileMenuPanel.classList.remove('hidden');
             mobileMenuPanel.classList.add('reveal');
             mobileMenu.classList.add('slidedown');
             content.classList.add('blur');
