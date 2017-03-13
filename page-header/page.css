@@ -2,21 +2,18 @@
 html, body {
     height: 100%;   
 }
-body * {
-    font-family: sans-serif;
-}
 body {
+    font-family: sans-serif;
     position: relative;
-}
-header {
-    border: 1px solid black;
-    flex-grow: 0;
 }
 .hidden {
     display: none;
 }
 .nav-type {
     font-size: 2rem;
+}
+header {
+    border: 1px solid black;
 }
 .horizontal-bar {
     display: flex;
@@ -38,6 +35,14 @@ header {
     margin: 10px;
     padding: 6px 3px 3px 3px;
 }
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .mobile-wrapper {
     position: absolute;
     right: 0;
@@ -45,20 +50,30 @@ header {
     left: 0;
     top: 50px;
 }
+.reveal-wrapper {
+    animation: reveal;
+    animation-duration: 1s; 
+    opacity: 1;
+}
 .mobile-translucent-background {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: red;
     z-index: -1;
-    opacity: 0.5;   
+    background-color: #999;
+} .mobile-translucent-background.enabled {
+    opacity: 0.5;
 }
 .mobile-menu-items {
     z-index: 0;
+    opacity: 1;
 }
 .mobile-menu-items > span {
     display: block;
     padding: 5px 10px;
     margin-top: 10px;
     border: 1px solid black;
+}
+.content.blurred {
+    filter: blur(2px);
 }
