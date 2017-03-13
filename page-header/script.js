@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var menuButton = document.getElementById('menuButton');
-    var mobileMenuPanel = document.getElementById('mobilePanel');
+    var mobileMenuPanel = document.querySelector('.mobile-wrapper');
     var mobileMenu = document.querySelector('.mobile-menu-items');
     
     //temporary stub
@@ -17,14 +17,15 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             mobileMenuPanel.classList.remove('hidden');
             mobileMenuPanel.classList.add('reveal');
-            mobileMenu.classList.add('slidedown');
+            mobileMenu.classList.add('reveal');
             content.classList.add('blur');
         } 
     });
     mobileMenuPanel.addEventListener('animationend', function(event) {
         if(event.target.classList.contains('hide')) {
-            event.target.classList.remove('hide');
-            event.target.classList.add('hidden');
+            mobileMenuPanel.classList.remove('hide');
+            mobileMenuPanel.classList.add('hidden');
+            mobileMenu.classList.remove('hide');
         }
     }); 
 });
