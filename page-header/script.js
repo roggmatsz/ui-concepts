@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var menuButton = document.getElementById('menuButton');
+    var menuButton = document.querySelector('.menu-wrapper');
     var mobileMenuPanel = document.querySelector('.mobile-wrapper');
     var mobileMenu = document.querySelector('.mobile-menu-items');
     
@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
             mobileMenuPanel.classList.add('hide');
             mobileMenu.classList.add('hide');
             content.classList.remove('blur');
+            menuButton.classList.remove('active');
         } else {
             mobileMenuPanel.classList.remove('hidden');
             mobileMenuPanel.classList.add('reveal');
             mobileMenu.classList.add('reveal');
             content.classList.add('blur');
+            menuButton.classList.add('active');
         } 
     });
     mobileMenuPanel.addEventListener('animationend', function(event) {
