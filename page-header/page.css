@@ -35,6 +35,17 @@ header {
     color: white;
 } .menu-wrapper:hover .menu-button {
     border-color: white;
+} .menu-wrapper.active {
+    background-color: #222;
+    color: white;
+} .menu-wrapper.active .menu-button {
+    border-color: white;
+} .menu-wrapper.active:hover {
+    background-color: white;
+    color: #222;
+    border-left: 1px solid black;
+} .menu-wrapper.active:hover .menu-button {
+    border-color: #222;
 }
 .menu-button {
     text-transform: uppercase;
@@ -76,7 +87,8 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    top: 50px;
+    top: 45px;
+    z-index: 5;
 } .mobile-wrapper.reveal {
     animation: reveal;
     animation-duration: 1s;
@@ -91,7 +103,7 @@ header {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-color: #999; 
+    background-color: black; 
     opacity: 0.7;
 }
 .mobile-menu-items {
@@ -100,10 +112,12 @@ header {
 } .mobile-menu-items.reveal {
     animation: slidedown;
     animation-duration: 1s;
+} .mobile-menu-items.reveal > span {
+    color: white;
 } .mobile-menu-items.hide {
     animation: unslidedown;
     animation-duration: 1s;
-}
+} 
 .mobile-menu-items > span {
     display: block;
     padding: 5px 10px;
