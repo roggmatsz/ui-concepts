@@ -27,6 +27,9 @@ header {
 }
 .desktop-menu-items > span {
     margin-left: 20px;
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    border: 1px solid black;
 }
 .menu-wrapper {
     padding: 10px 10px 17px 10px;
@@ -129,4 +132,13 @@ header {
 } 
 .content.blur {
     filter: blur(2px);
+}
+
+@media screen and (min-width: 401px) {
+    .desktop-menu-items {
+        display: block;
+    }
+    .menu-wrapper {
+        display: none;
+    }
 }

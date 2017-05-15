@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+body {
+    display: flex;
+}
+nav, nav * {
+    border: 1px solid black;
+}
+.content {border: 1px solid black;}
+@media screen and (max-width: 767px) {}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 992px) {}
+@media screen and (min-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+    nav {
+        flex-basis: 20%;
+    }
+    .content {
+        flex-basis: 80%;
+    }
+}
