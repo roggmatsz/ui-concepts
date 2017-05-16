@@ -15,16 +15,61 @@ nav, nav * {
 .content {border: 1px solid black;}
 @media screen and (max-width: 767px) {}
 @media screen and (min-width: 768px) {}
-@media screen and (min-width: 992px) {}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
     body {
         display: flex;
         flex-direction: row;
     }
     nav {
         flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        justify-content: space-between;
+    }
+    #logo {
+        margin: 40px 0 40px 40px;;
+        height: 100px;
+    }
+    .links {
+        border: none;
+    }
+    .link-container {
+        margin-bottom: 20px;
+    }
+    .link-container > span {
+        display: block;
+        padding: 6px 5px;
+        font-size: 2rem;
+        margin-left: 60px;
+        border: none;
+    }
+    .link-container > ul {
+        margin-bottom: 0;
+    }
+    .social {
+        display: flex;
+        direction: row;
+        flex-wrap: wrap;
+        margin-left: 60px;
+        justify-content: flex-end;
+        border: none;
+        width: 105px;
+    }
+    .social > .social-link {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    } .social > .social-link:nth-child(2n) {
+        margin-right: 0;
+    } .social > .social-link:last-child {
+        margin-right: 0;
     }
     .content {
-        flex-basis: 80%;
+        flex-basis: 75%;
     }
+}
+@media screen and (min-width: 1200px) {
+    
 }
