@@ -6,7 +6,7 @@ html, body {
     height: 100%;
     font-family: sans-serif;
 }
-body {
+body, nav {
     display: flex;
 }
 nav, nav * {
@@ -14,22 +14,32 @@ nav, nav * {
 }
 .content {border: 1px solid black;}
 @media screen and (max-width: 767px) {}
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: row;
+    }
+    #logo {
+        width: 30px;
+    }
+}
 @media screen and (min-width: 992px) {
     body {
-        display: flex;
         flex-direction: row;
     }
     nav {
         flex-basis: 20%;
-        display: flex;
         flex-direction: column;
         margin-right: 20px;
         justify-content: space-between;
     }
     #logo {
-        margin: 40px 0 40px 40px;;
+        margin: 40px 0;
         height: 100px;
+        width: 100px;
+        align-self: center;
     }
     .links {
         border: none;
@@ -40,21 +50,25 @@ nav, nav * {
     .link-container > span {
         display: block;
         padding: 6px 5px;
-        font-size: 2rem;
+        font-size: 2.25rem;
         margin-left: 60px;
         border: none;
     }
     .link-container > ul {
         margin-bottom: 0;
     }
+    .link-container > ul > li {
+        font-size: 2rem;
+        padding: 5px 4px;
+    }
     .social {
         display: flex;
         direction: row;
         flex-wrap: wrap;
-        margin-left: 60px;
         justify-content: flex-end;
+        width: 102px;
+        align-self: center;
         border: none;
-        width: 105px;
     }
     .social > .social-link {
         width: 40px;
@@ -67,7 +81,7 @@ nav, nav * {
         margin-right: 0;
     }
     .content {
-        flex-basis: 75%;
+        flex-basis: 80%;
     }
 }
 @media screen and (min-width: 1200px) {
