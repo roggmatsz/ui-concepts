@@ -39,7 +39,7 @@ nav, nav * {
         margin: 40px 0;
         height: 100px;
         width: 100px;
-        align-self: center;
+        align-self: right;
     }
     .links {
         border: none;
@@ -49,10 +49,9 @@ nav, nav * {
     }
     .link-container > span {
         display: block;
+        width: 100px;
         padding: 6px 5px;
         font-size: 2.25rem;
-        margin-left: 60px;
-        border: none;
     }
     .link-container > ul {
         margin-bottom: 0;
