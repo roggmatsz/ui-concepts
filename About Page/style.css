@@ -130,7 +130,7 @@ nav, nav * {
         margin: 40px 0 80px 0;
         height: 100px;
         width: 100px;
-        align-self: center;
+        align-self: right;
     }
     .links {
         margin-bottom: 40px;
@@ -147,9 +147,15 @@ nav, nav * {
     }
     .link-container > span {
         display: block;
+<<<<<<< HEAD
         font-size: 2.25rem;
         width: 100px;
         border: none;
+=======
+        width: 100px;
+        padding: 6px 5px;
+        font-size: 2.25rem;
+>>>>>>> de784f48a8d828cca4dfebd5ad412acfdee256e9
     }
     .link-container > ul {
         margin-bottom: 0;
